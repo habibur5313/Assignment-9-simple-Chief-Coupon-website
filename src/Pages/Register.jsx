@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
-const {setUser,SignUpEmailAndPassword} = useContext(AuthContext)
+const {setUser,SignUpEmailAndPassword,SignInGoogle} = useContext(AuthContext)
 const navigate = useNavigate()
 const handleSignUp = e => {
                     e.preventDefault()
@@ -27,6 +27,12 @@ const handleSignUp = e => {
                     .catch(err => alert('ERROR'))
                     
 }
+
+const handleGoogleLogin = () => {
+                    SignInGoogle()
+                    .then(res => setUser(res.user))
+                    navigate('/')
+        }
                     return (
                                         <div className='min-h-screen flex justify-center items-center'>
                                          <div className="card bg-base-100 p-5 w-full max-w-lg shrink-0 rounded-none border">
@@ -61,6 +67,7 @@ const handleSignUp = e => {
                                         </div>
                                         </form>
                                         <p className="text-center"> Have An Account ? <Link to={'/auth/login'}>Login</Link></p>
+    <button onClick={handleGoogleLogin} className='btn btn-accent text-xl font-medium text-purple-500'>Google Login</button>
     </div>                   
                                         </div>
                     );

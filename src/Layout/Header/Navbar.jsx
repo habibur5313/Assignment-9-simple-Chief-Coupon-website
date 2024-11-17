@@ -49,7 +49,7 @@ const {pathname} = useLocation()
                       </div>
                       <div className="navbar-end">
                 
-                                        {user? <div><button className='btn' onClick={handleSignOut}>Sign Out</button> <button className='btn'>{user.email}</button></div>: pathname === '/auth/login' ? <Link className='btn' to={'/auth/register'}>Sign UP</Link> : <Link className='btn' to={'/auth/login'}>Sign In</Link>}
+                                        {user? <div className='flex gap-4'><button className='btn' onClick={handleSignOut}>Sign Out</button> <button className='btn hidden md:block'>{user.email}</button></div>: pathname === '/auth/login' ? <Link className='btn' to={'/auth/register'}>Sign UP</Link> : <Link className='btn' to={'/auth/login'}>Sign In</Link>}
                     
                     
                       </div>

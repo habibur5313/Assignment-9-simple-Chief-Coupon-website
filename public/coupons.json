@@ -1,0 +1,159 @@
+[
+                    {
+                      "_id": "1",
+                      "brand_name": "ShopSmart",
+                      "rating": 4.7,
+                      "description": "Find the best deals at ShopSmart!",
+                      "brand_logo": "https://example.com/shopsmart-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "SAVE20",
+                          "description": "Get 20% off on all items",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Minimum purchase of $50",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "FREESHIP",
+                          "description": "Free shipping on orders over $100",
+                          "expiry_date": "2024-11-30",
+                          "condition": "No minimum purchase",
+                          "coupon_type": "Free Shipping"
+                        }
+                      ],
+                      "shop_link": "https://shopsmart.com",
+                      "category": "Electronics",
+                      "isSaleOn": true
+                    },
+                    {
+                      "_id": "2",
+                      "brand_name": "FashionFrenzy",
+                      "rating": 4.5,
+                      "description": "Trendy fashion at unbeatable prices!",
+                      "brand_logo": "https://example.com/fashionfrenzy-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "NEWYEAR30",
+                          "description": "30% off on new arrivals",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Valid on new arrivals only",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "BOGO50",
+                          "description": "Buy one, get one 50% off",
+                          "expiry_date": "2024-11-30",
+                          "condition": "Applies to selected items",
+                          "coupon_type": "BOGO"
+                        }
+                      ],
+                      "shop_link": "https://fashionfrenzy.com",
+                      "category": "Apparel",
+                      "isSaleOn": false
+                    },
+                    {
+                      "_id": "3",
+                      "brand_name": "GadgetWorld",
+                      "rating": 4.8,
+                      "description": "Latest gadgets and electronics at great prices.",
+                      "brand_logo": "https://example.com/gadgetworld-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "TECH10",
+                          "description": "10% off on tech accessories",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Valid on accessories only",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "FREECASE",
+                          "description": "Free case with smartphone purchase",
+                          "expiry_date": "2024-11-30",
+                          "condition": "Valid on smartphones only",
+                          "coupon_type": "Free Gift"
+                        }
+                      ],
+                      "shop_link": "https://gadgetworld.com",
+                      "category": "Electronics",
+                      "isSaleOn": true
+                    },
+                    {
+                      "_id": "4",
+                      "brand_name": "BeautyBliss",
+                      "rating": 4.6,
+                      "description": "Enhance your beauty with our exclusive products.",
+                      "brand_logo": "https://example.com/beautybliss-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "GLOW15",
+                          "description": "15% off on skincare products",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Valid on skincare products only",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "MAKEUP25",
+                          "description": "25% off on all makeup",
+                          "expiry_date": "2024-11-30",
+                          "condition": "No minimum purchase",
+                          "coupon_type": "Percentage"
+                        }
+                      ],
+                      "shop_link": "https://beautybliss.com",
+                      "category": "Beauty",
+                      "isSaleOn": false
+                    },
+                    {
+                      "_id": "5",
+                      "brand_name": "HomeComfort",
+                      "rating": 4.7,
+                      "description": "Comfortable living with our home essentials.",
+                      "brand_logo": "https://example.com/homecomfort-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "COZY20",
+                          "description": "20% off on home decor",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Valid on home decor only",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "SOFTBLANKET",
+                          "description": "Free blanket with purchase over $100",
+                          "expiry_date": "2024-11-30",
+                          "condition": "Valid on orders over $100",
+                          "coupon_type": "Free Gift"
+                        }
+                      ],
+                      "shop_link": "https://homecomfort.com",
+                      "category": "Home",
+                      "isSaleOn": true
+                    },
+                    {
+                      "_id": "6",
+                      "brand_name": "FitnessPro",
+                      "rating": 4.9,
+                      "description": "Stay fit with our premium fitness products.",
+                      "brand_logo": "https://example.com/fitnesspro-logo.png",
+                      "coupons": [
+                        {
+                          "coupon_code": "FITNESS10",
+                          "description": "10% off on all fitness equipment",
+                          "expiry_date": "2024-12-31",
+                          "condition": "Valid on fitness equipment only",
+                          "coupon_type": "Percentage"
+                        },
+                        {
+                          "coupon_code": "HEALTHY20",
+                          "description": "20% off on health supplements",
+                          "expiry_date": "2024-11-30",
+                          "condition": "Valid on health supplements only",
+                          "coupon_type": "Percentage"
+                        }
+                      ],
+                      "shop_link": "https://fitnesspro.com",
+                      "category": "Fitness",
+                      "isSaleOn": true
+                    }
+                  ]
+                  

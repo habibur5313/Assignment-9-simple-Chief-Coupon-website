@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 
 const Login = () => {
-                    const {user,setUser,SignInEmailAndPassword} = useContext(AuthContext)
+                    const {user,setUser,SignInEmailAndPassword,SignInGoogle} = useContext(AuthContext)
                     const navigate = useNavigate()
                     
                     const handleLogin = e => {
@@ -14,6 +14,11 @@ const Login = () => {
                       .then(res => setUser(res.user))
                       navigate('/')
                     }
+        const handleGoogleLogin = () => {
+                    SignInGoogle()
+                    .then(res => setUser(res.user))
+                    navigate('/')
+        }
                                         return (
                     <div className='min-h-screen flex justify-center items-center'>
                     <div className="card bg-base-100 p-5 w-full max-w-lg shrink-0 rounded-none border">
@@ -42,6 +47,7 @@ const Login = () => {
                     </div>
                     </form>
                     <p className="text-center">Dont’t Have An Account ? <Link to={'/auth/register'}>Register</Link></p>
+                    <button onClick={handleGoogleLogin} className='btn btn-accent text-xl font-medium text-purple-500'>Google Login</button>
                        </div>                   
                                                            </div>
                                        );
