@@ -13,11 +13,12 @@ const {pathname} = useLocation()
                     <NavLink to={'/brands'}>Brands</NavLink>
                     <NavLink to={'/profile'}>My Profile</NavLink>
                     <NavLink to={'/about/dev'}>About dev</NavLink>
+                    <NavLink to={'/auth/updateInformation'}>Update Information</NavLink>
                     </>
                     
                     
                                         return (
-                                                            <div className="navbar bg-base-100">
+                                                            <div className="navbar bg-base-100 rounded-xl ">
                       <div className="navbar-start">
                         <div className="dropdown">
                           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +41,7 @@ const {pathname} = useLocation()
                             {links}
                           </ul>
                         </div>
-                        <a className="btn btn-ghost text-4xl">daisyUI</a>
+                        <a className="btn btn-ghost text-4xl ml-5">daisyUI</a>
                       </div>
                       <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-5 text-xl font-medium ">
@@ -49,7 +50,7 @@ const {pathname} = useLocation()
                       </div>
                       <div className="navbar-end">
                 
-                                        {user? <div className='flex gap-4'><button className='btn' onClick={handleSignOut}>Sign Out</button> <button className='btn hidden md:block'>{user.email}</button></div>: pathname === '/auth/login' ? <Link className='btn' to={'/auth/register'}>Sign UP</Link> : <Link className='btn' to={'/auth/login'}>Sign In</Link>}
+                                        {user? <div className='flex gap-4'><button className='btn ' onClick={handleSignOut}>Sign Out</button> <button className='btn mr-5 hidden md:block'>{user.email}</button></div>: pathname === '/auth/login' ? <Link className='btn mr-5' to={'/auth/register'}>Sign UP</Link> : <Link className='btn mr-5' to={'/auth/login'}>Sign In</Link>}
                     
                     
                       </div>

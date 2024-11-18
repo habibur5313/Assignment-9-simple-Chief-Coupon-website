@@ -10,6 +10,9 @@ import AuthProvider from './Context/AuthProvider';
 import Login from './Pages/Login';
 import AuthLayout from './Layout/AuthLayout';
 import Register from './Pages/Register';
+import { Toaster } from 'react-hot-toast';
+import UpdateInformation from './Pages/UpdateInformation';
+
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,10 @@ const router = createBrowserRouter([
         path: "/auth/register",
         element: <Register></Register>,
       },
+      {
+        path: "/auth/updateInformation",
+        element: <UpdateInformation></UpdateInformation>,
+      },
     ]
   },
  
@@ -47,7 +54,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 <AuthProvider>
+
 <RouterProvider router={router} />
+<Toaster />
 </AuthProvider>
   </StrictMode>,
 )
