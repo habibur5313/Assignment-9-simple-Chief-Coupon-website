@@ -4,7 +4,7 @@
                       "brand_name": "ShopSmart",
                       "rating": 4.7,
                       "description": "Find the best deals at ShopSmart!",
-                      "brand_logo": "https://example.com/shopsmart-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/2nK5WmF/images-1.png",
                       "coupons": [
                         {
                           "coupon_code": "SAVE20",
@@ -21,7 +21,7 @@
                           "coupon_type": "Free Shipping"
                         }
                       ],
-                      "shop_link": "https://shopsmart.com",
+                      "shop_link": "https://shopmart.com.bd/",
                       "category": "Electronics",
                       "isSaleOn": true
                     },
@@ -30,7 +30,7 @@
                       "brand_name": "FashionFrenzy",
                       "rating": 4.5,
                       "description": "Trendy fashion at unbeatable prices!",
-                      "brand_logo": "https://example.com/fashionfrenzy-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/xj6CH8P/images-2.png",
                       "coupons": [
                         {
                           "coupon_code": "NEWYEAR30",
@@ -47,7 +47,7 @@
                           "coupon_type": "BOGO"
                         }
                       ],
-                      "shop_link": "https://fashionfrenzy.com",
+                      "shop_link": "https://frenzyfashionbd.com/",
                       "category": "Apparel",
                       "isSaleOn": false
                     },
@@ -56,7 +56,7 @@
                       "brand_name": "GadgetWorld",
                       "rating": 4.8,
                       "description": "Latest gadgets and electronics at great prices.",
-                      "brand_logo": "https://example.com/gadgetworld-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/dgVCkSS/images-3.jpg",
                       "coupons": [
                         {
                           "coupon_code": "TECH10",
@@ -73,7 +73,7 @@
                           "coupon_type": "Free Gift"
                         }
                       ],
-                      "shop_link": "https://gadgetworld.com",
+                      "shop_link": "https://gadgetworld.com.ng/",
                       "category": "Electronics",
                       "isSaleOn": true
                     },
@@ -82,7 +82,7 @@
                       "brand_name": "BeautyBliss",
                       "rating": 4.6,
                       "description": "Enhance your beauty with our exclusive products.",
-                      "brand_logo": "https://example.com/beautybliss-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/fHqbN81/images-3.png",
                       "coupons": [
                         {
                           "coupon_code": "GLOW15",
@@ -99,7 +99,7 @@
                           "coupon_type": "Percentage"
                         }
                       ],
-                      "shop_link": "https://beautybliss.com",
+                      "shop_link": "https://beautybliss.co.nz/",
                       "category": "Beauty",
                       "isSaleOn": false
                     },
@@ -108,7 +108,7 @@
                       "brand_name": "HomeComfort",
                       "rating": 4.7,
                       "description": "Comfortable living with our home essentials.",
-                      "brand_logo": "https://example.com/homecomfort-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/C6YFgp7/download.png",
                       "coupons": [
                         {
                           "coupon_code": "COZY20",
@@ -125,7 +125,7 @@
                           "coupon_type": "Free Gift"
                         }
                       ],
-                      "shop_link": "https://homecomfort.com",
+                      "shop_link": "https://www.homecomfort.net/",
                       "category": "Home",
                       "isSaleOn": true
                     },
@@ -134,7 +134,7 @@
                       "brand_name": "FitnessPro",
                       "rating": 4.9,
                       "description": "Stay fit with our premium fitness products.",
-                      "brand_logo": "https://example.com/fitnesspro-logo.png",
+                      "brand_logo": "https://i.ibb.co.com/z77srvk/download-1.png",
                       "coupons": [
                         {
                           "coupon_code": "FITNESS10",
@@ -151,9 +151,167 @@
                           "coupon_type": "Percentage"
                         }
                       ],
-                      "shop_link": "https://fitnesspro.com",
+                      "shop_link": "https://www.fitnesspros.app/",
                       "category": "Fitness",
                       "isSaleOn": true
-                    }
-                  ]
+                    },
+                    
+                      {
+                        "_id": "7",
+                        "brand_name": "FoodieHaven",
+                        "rating": 4.8,
+                        "description": "Delicious deals on all your favorite foods!",
+                        "brand_logo": "https://i.ibb.co.com/QPLjnxg/download.jpg",
+                        "coupons": [
+                          {
+                            "coupon_code": "YUMMY15",
+                            "description": "15% off on all orders",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid for all orders",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "FREEDELIVERY",
+                            "description": "Free delivery on orders over $50",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Minimum purchase of $50",
+                            "coupon_type": "Free Shipping"
+                          }
+                        ],
+                        "shop_link": "https://foodiesheaven.com/",
+                        "category": "Food",
+                        "isSaleOn": true
+                      },
+                      {
+                        "_id": "8",
+                        "brand_name": "TechTrove",
+                        "rating": 4.9,
+                        "description": "Innovative tech products at unbeatable prices.",
+                        "brand_logo": "https://i.ibb.co.com/yVRwBQg/download-1.jpg",
+                        "coupons": [
+                          {
+                            "coupon_code": "GADGET20",
+                            "description": "20% off on all gadgets",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid on gadgets only",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "BUNDLE10",
+                            "description": "10% off on bundles",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Valid on bundle purchases only",
+                            "coupon_type": "Percentage"
+                          }
+                        ],
+                        "shop_link": "https://techtrove.uk/",
+                        "category": "Electronics",
+                        "isSaleOn": false
+                      },
+                      {
+                        "_id": "9",
+                        "brand_name": "TravelDeals",
+                        "rating": 4.6,
+                        "description": "Best travel deals and discounts.",
+                        "brand_logo": "https://i.ibb.co.com/wrx61FY/download-2.png",
+                        "coupons": [
+                          {
+                            "coupon_code": "FLYHIGH",
+                            "description": "10% off on all flights",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid on international flights only",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "HOTEL20",
+                            "description": "20% off on hotel bookings",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Minimum 3-night stay",
+                            "coupon_type": "Percentage"
+                          }
+                        ],
+                        "shop_link": "https://travel-dealz.com/",
+                        "category": "Travel",
+                        "isSaleOn": true
+                      },
+                      {
+                        "_id": "10",
+                        "brand_name": "PetParadise",
+                        "rating": 4.7,
+                        "description": "Exclusive offers for your furry friends.",
+                        "brand_logo": "https://i.ibb.co.com/R0hJXQb/download-3.png",
+                        "coupons": [
+                          {
+                            "coupon_code": "PETCARE10",
+                            "description": "10% off on pet care products",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid on pet care products only",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "TREATS15",
+                            "description": "15% off on pet treats",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Valid on pet treats only",
+                            "coupon_type": "Percentage"
+                          }
+                        ],
+                        "shop_link": "https://www.petparadise.com/",
+                        "category": "Pet Supplies",
+                        "isSaleOn": false
+                      },
+                      {
+                        "_id": "11",
+                        "brand_name": "BookBarn",
+                        "rating": 4.5,
+                        "description": "Discover new reads and enjoy great discounts.",
+                        "brand_logo": "https://i.ibb.co.com/6vDqvM5/images-4.jpg",
+                        "coupons": [
+                          {
+                            "coupon_code": "READ50",
+                            "description": "50% off on all books",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid on all books",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "NOVEL15",
+                            "description": "15% off on bestsellers",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Valid on bestsellers only",
+                            "coupon_type": "Percentage"
+                          }
+                        ],
+                        "shop_link": "https://bookbarn.com/",
+                        "category": "Books",
+                        "isSaleOn": true
+                      },
+                      {
+                        "_id": "12",
+                        "brand_name": "OutdoorOutfit",
+                        "rating": 4.8,
+                        "description": "Gear up with our outdoor essentials.",
+                        "brand_logo": "https://i.ibb.co.com/Kwq3Nz9/download-4.png",
+                        "coupons": [
+                          {
+                            "coupon_code": "CAMPING25",
+                            "description": "25% off on camping gear",
+                            "expiry_date": "2024-12-31",
+                            "condition": "Valid on camping gear only",
+                            "coupon_type": "Percentage"
+                          },
+                          {
+                            "coupon_code": "HIKING10",
+                            "description": "10% off on hiking equipment",
+                            "expiry_date": "2024-11-30",
+                            "condition": "Valid on hiking equipment only",
+                            "coupon_type": "Percentage"
+                          }
+                        ],
+                        "shop_link": "https://www.outdooroutfits.com/",
+                        "category": "Outdoor Gear",
+                        "isSaleOn": true
+                      }
+                    ]
+                    
                   

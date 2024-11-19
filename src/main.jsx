@@ -12,6 +12,10 @@ import AuthLayout from './Layout/AuthLayout';
 import Register from './Pages/Register';
 import { Toaster } from 'react-hot-toast';
 import UpdateInformation from './Pages/UpdateInformation';
+import Coupons from './Pages/Coupons';
+import Brands from './Pages/Brands';
+import CardDetails from './Pages/CardDetails';
+import Profile from './Layout/Profile';
 
 
 const router = createBrowserRouter([
@@ -21,7 +25,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: 'hello'
+        element: <Coupons></Coupons>,
+        loader: () => fetch('/coupons.json')
+      },
+      {
+        path: '/profile',
+        element: <Profile></Profile>
+       },
+      {
+        path: '/brands',
+        element: <Brands></Brands>,
+        loader: () => fetch('/coupons.json')
+      },
+      {
+        path: '/getCode/:id',
+        element: <CardDetails></CardDetails>,
+        loader: () => fetch('/coupons.json')
       },
     ]
   },
@@ -43,7 +62,7 @@ const router = createBrowserRouter([
       },
     ]
   },
- 
+
   {
     path: '*',
     element: 'ERROR'

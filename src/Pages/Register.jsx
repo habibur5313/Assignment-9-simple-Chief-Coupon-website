@@ -12,6 +12,7 @@ const Register = () => {
 const {setUser,SignUpEmailAndPassword,SignInGoogle,Update_information} = useContext(AuthContext)
 const navigate = useNavigate()
 const [showPassword,setShowPassword] = useState(false)
+const [error,setError] = useState()
 const handleSignUp = e => {
                     e.preventDefault()
                     const name = e.target.name.value;
@@ -20,8 +21,9 @@ const handleSignUp = e => {
                     const photo = e.target.photoUrl.value;
                     const terms = (e.target.terms.checked)
                     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$#!%*?&])[A-Za-z\d@$#!%*?&]{6,}$/;
+                    
                     if(!passwordRegex.test(password)){
-                                       return toast.error('Password atleast 1 lowercase letter 1 uppercase letter 1 number 1 special characters and atleast 6 characters');              
+                                       return  setError('Password atleast 1 lowercase letter 1 uppercase letter 1 number 1 special characters and atleast 6 characters');              
                     }
                     else if(!terms){
                                        return toast.error('please checked terms and condition')
@@ -29,6 +31,7 @@ const handleSignUp = e => {
                     
                     SignUpEmailAndPassword(email,password)
                     .then(res => {
+                                        setError()
                                         setUser(res.user)
                                         Update_information(name,photo)
                                         toast.success('Register Successfully')
@@ -37,6 +40,7 @@ const handleSignUp = e => {
                    })
                    
                     .catch(err => {
+                                        setError()
                                         toast.error(err.message);
                     })
 
@@ -46,8 +50,14 @@ const handleSignUp = e => {
 
 const handleGoogleLogin = () => {
                     SignInGoogle()
-                    .then(res => setUser(res.user))
-                    navigate('/')
+                    .then(res => {
+                      setUser(res.user)
+                      navigate('/')
+                    })
+                    .catch(err => {
+                      toast.error(err.message);
+  })
+                    
         }
                     return (
                                         <div className='mt-10 md:mt-20 lg:mt-32 flex justify-center items-center'>
@@ -94,6 +104,7 @@ const handleGoogleLogin = () => {
                                             <input type="checkbox" name='terms' className="checkbox checkbox-primary" />
                                             <span className="label-text">Terms and condition</span>
                                           </label>
+                                          <p className='text-red-500 font-medium'>{error}</p>
                                         <div className="form-control mt-2">
                                         <button className="btn btn-neutral">Register</button>
                                         </div>

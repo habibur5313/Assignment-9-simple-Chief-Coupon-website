@@ -25,8 +25,15 @@ const Login = () => {
                     }
         const handleGoogleLogin = () => {
                     SignInGoogle()
-                    .then(res => setUser(res.user))
-                    navigate('/')
+                    .then(res => {
+                      setUser(res.user)
+                      navigate('/')
+                    })
+                    .catch(err => {
+                      toast.error(err.message)
+                    })
+
+                    
         }
                                         return (
                     <div className='mt-10 md:mt-20 lg:mt-32 flex justify-center items-center'>
