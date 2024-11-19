@@ -18,7 +18,7 @@ const {pathname} = useLocation()
                     
                     
                                         return (
-                                                            <div className="navbar pt-4 items-start bg-base-100 rounded-xl ">
+                                                            <div className="navbar pt-4 min-h-[140px] items-start bg-base-100 rounded-xl ">
                       <div className="navbar-start">
                         <div className="dropdown">
                           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const {pathname} = useLocation()
                             {links}
                           </ul>
                         </div>
-                        <h3 className="btn btn-ghost  pl-0 md:text-3xl sm:text-xl font-semibold  ">Code Collecting</h3>
+                        <h3 className="btn btn-ghost  pl-0 md:text-3xl sm:text-xl font-semibold  ">Coupon Chief</h3>
                       </div>
                       <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-2 xl:gap-4 text-xl font-medium ">
@@ -53,9 +53,9 @@ const {pathname} = useLocation()
                                         {user? <div className='flex flex-col gap-4'>
                                           <div className='flex justify-end items-center gap-2 sm:gap-5'>
                                         <Link to={'/profile'}><img className='w-8 bg-purple-700 rounded-full' src={user?.photoURL} alt="" /></Link>
-                                          <button className='btn ' onClick={handleSignOut}>Sign Out</button>
+                                          <button className='btn bg-purple-700 text-white' onClick={handleSignOut}>Sign Out</button>
                                         </div> 
-                                        <button className='btn hidden sm:block'>{user?.email}</button></div>: pathname === '/auth/login' ? <Link className='btn mr-5' to={'/auth/register'}>Sign UP</Link> : <Link className='btn mr-5' to={'/auth/login'}>Sign In</Link>}
+                                        <button className='btn hidden bg-purple-700 text-white sm:block'>{user?.email}</button></div>: pathname === '/auth/login' ? <Link className='btn mr-5 bg-purple-700 text-white' to={'/auth/register'}>Sign UP</Link> : <Link className='btn mr-5 bg-purple-700 text-white' to={'/auth/login'}>Sign In</Link>}
                     
                     
                       </div>

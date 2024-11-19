@@ -16,6 +16,7 @@ import Coupons from './Pages/Coupons';
 import Brands from './Pages/Brands';
 import CardDetails from './Pages/CardDetails';
 import Profile from './Layout/Profile';
+import PrivateRoute from './Private/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Profile></Profile>
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
        },
       {
         path: '/brands',
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/getCode/:id',
-        element: <CardDetails></CardDetails>,
+        element: <PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
         loader: () => fetch('/coupons.json')
       },
     ]
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/auth/updateInformation",
-        element: <UpdateInformation></UpdateInformation>,
+        element: <PrivateRoute><UpdateInformation></UpdateInformation></PrivateRoute>,
       },
     ]
   },

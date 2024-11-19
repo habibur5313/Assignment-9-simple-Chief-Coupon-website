@@ -1,23 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'animate.css';
 
 const CouponsCard = ({coupon}) => {
 
-const {_id,brand_name,rating,description,brand_logo,coupons} = coupon
+const {_id,brand_name,isSaleOn,brand_logo,coupons,category} = coupon
+
 
                     return (
                                         <div className="card card-compact bg-base-100 shadow-xl">
                                         <figure>
-                                        <img
-                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                        <img className='w-full h-[300px]'
+                                        src={brand_logo}
                                         alt="Shoes" />
                                         </figure>
                                         <div className="card-body">
-                                        <h2 className="card-title">Shoes!</h2>
-                                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                                        <div className="card-actions justify-end">
-                                        <Link to={`/getCode/${_id}`}><button className="btn btn-primary">Buy Now</button></Link>
+                                        <div className='flex gap-5'>
+                                        <img className='w-14  rounded-full' src={brand_logo} alt="" />
+                                        <h2 className="card-title">{brand_name}</h2>
                                         </div>
+                                        <p className='text-2xl font-medium'>Total Coupons:     {coupons.length}</p>
+                                        <p className='text-2xl font-medium'>Category: {category}</p>
+                                        <div className='flex justify-between items-center'>
+                                        <div>
+                                        {isSaleOn ? <Link to={`/getCode/${_id}`}><button className="btn btn-primary">View Coupons</button></Link>: <button className="btn btn-primary">View Coupons</button>}
+                                        </div>
+                                          <p className='text-xl font-medium flex  justify-end text-green-400 animate__animated animate__bounce animate__infinite	infinite'>{isSaleOn && 'Sale is ON'}</p>
+                                          </div>
+                                      
                                         </div>
                                         </div>
                     );

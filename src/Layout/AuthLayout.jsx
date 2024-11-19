@@ -7,8 +7,10 @@ const AuthLayout = () => {
                     return (
                                         <div className='bg-sky-100'>
                                         <div className='container mx-auto'>
-                                                            <Navbar></Navbar>
-                                                            <Outlet></Outlet>
+                                       <Navbar></Navbar>
+                                       <div className='min-h-[calc(100vh-540px)]'> 
+                                        <Outlet></Outlet>              
+                                        </div>
                                                             
                                         </div>
                                         <Footer></Footer>

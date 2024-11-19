@@ -20,8 +20,9 @@ e.target.name.value = ''
 e.target.photoUrl.value = ''
 }
                     return (
-                                        <div className='mt-10  md:mt-20 lg:mt-32 flex justify-center items-center'>
-                                         <div className="card bg-base-100 md:mb-10 p-5 w-full max-w-lg shrink-0 rounded-none border">
+                                       
+                                         <div className='mt-10 md:mt-20 lg:mt-32 flex justify-center items-center'>
+                                         <div className="card bg-base-100 p-5 w-full max-w-lg shrink-0 rounded-none border">
                                                             <h1 className='text-2xl font-semibold text-center'>Update Information!</h1>
                                         <form onSubmit={handleUpdateProfile} className="card-body px-2 md:px-5 lg:px-14">
                                         <div className="form-control">
@@ -41,6 +42,7 @@ e.target.photoUrl.value = ''
                                         </form>
                                         </div>
                                         </div>
+                                      
                     );
 };
 

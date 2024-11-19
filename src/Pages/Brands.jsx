@@ -1,6 +1,7 @@
 import React from 'react';
 import CouponsCard from './CouponsCard';
 import { useLoaderData } from 'react-router-dom';
+import BrandsCard from './BrandsCard';
 
 const Brands = () => {
                     const data = useLoaderData()
@@ -8,8 +9,8 @@ const Brands = () => {
 
                     return (
                                         <div>
-                                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
-                                      {data.map((coupon,idx) => <CouponsCard coupon={coupon} key={idx}></CouponsCard>)}                      
+                                        <div className='max-w-xl mx-4 md:mx-auto flex flex-col gap-6 mt-10'>
+                                      {data.map((coupon,idx) => <BrandsCard coupon={coupon} key={idx}></BrandsCard>)}                      
                                         </div>
                                         </div>
                     );

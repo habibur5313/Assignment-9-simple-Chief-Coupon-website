@@ -20,7 +20,7 @@ const Footer = () => {
                                         
                                         </div>
                                         <div className=' border-t-2 mt-4 lg:w-2/3 mx-auto'>
-                                          <p className='text-xl font-medium text-center mt-4'>© 2024 – 2024 Code Collecting. All rights reserved.</p>                   
+                                          <p className='text-xl font-medium text-center mt-4'>© 2024 – 2024 Coupon Chief. All rights reserved.</p>                   
                                         </div>                  
                                         </div>
                     );

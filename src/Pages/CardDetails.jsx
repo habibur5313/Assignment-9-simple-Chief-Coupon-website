@@ -14,7 +14,7 @@ useEffect(() => {
 console.log(brand);
 
                     return (
-                                        <div className='min-h-[calc(100vh-430px)]'>
+                                        
                                         <div className="card max-w-xl mx-auto mt-10  card-compact bg-base-100 shadow-xl">
                                         <figure>
                                         <img
@@ -27,7 +27,7 @@ console.log(brand);
                                         
                                         </div>
                                         </div>
-                                        </div>
+                                    
                     );
 };
 

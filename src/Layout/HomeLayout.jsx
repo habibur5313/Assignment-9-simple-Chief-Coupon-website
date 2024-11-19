@@ -7,9 +7,12 @@ const HomeLayout = () => {
 
                     return (
                                        <div className='bg-sky-100'>
-                                         <div className='container mx-auto '>
-                                        <Navbar></Navbar>  
+                                        
+                                         <div className='container mx-auto  '>
+                                        <Navbar></Navbar> 
+                                        <div className='min-h-[calc(100vh-500px)]'> 
                                         <Outlet></Outlet>              
+                                        </div>
                                         </div>
                                         <Footer></Footer>
                                        </div>

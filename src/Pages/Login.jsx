@@ -1,6 +1,6 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
@@ -8,6 +8,10 @@ const Login = () => {
                     const {user,setUser,SignInEmailAndPassword,SignInGoogle} = useContext(AuthContext)
                     const navigate = useNavigate()
                     const [showPassword,setShowPassword] = useState(false)
+                   const location = useLocation()
+                   console.log(location);
+                   
+
                     const handleLogin = e => {
                       e.preventDefault()
                       const email = e.target.email.value;
@@ -16,7 +20,7 @@ const Login = () => {
                       .then(res => {
                         setUser(res.user)
                         toast.success('Login Successfully')
-                         navigate('/')
+                         {location.state ? navigate(location.state) : navigate('/')}
                       })
                       .catch(err => {
                         toast.error(err.message)
