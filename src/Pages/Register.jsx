@@ -106,7 +106,7 @@ const handleGoogleLogin = () => {
                                           </label>
                                           <p className='text-red-500 font-medium'>{error}</p>
                                         <div className="form-control mt-2">
-                                        <button className="btn btn-neutral">Register</button>
+                                        <button className="btn btn-primary">Register</button>
                                         </div>
                                         </form>
                                         <p className="text-center mb-4"> Have An Account ? <Link className='text-red-700 text-xl font-medium' to={'/auth/login'}>Login</Link></p>

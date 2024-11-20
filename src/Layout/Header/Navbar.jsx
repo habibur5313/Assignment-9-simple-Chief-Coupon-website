@@ -18,7 +18,7 @@ const {pathname} = useLocation()
                     
                     
                                         return (
-                                                            <div className="navbar pt-4 min-h-[140px] items-start bg-base-100 rounded-xl ">
+                        <div className=" navbar pt-4 min-h-[140px] items-start bg-white  rounded-xl ">
                       <div className="navbar-start">
                         <div className="dropdown">
                           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,9 +57,9 @@ const {pathname} = useLocation()
                                         </div> 
                                         <button className='btn hidden bg-purple-700 text-white sm:block'>{user?.email}</button></div>: pathname === '/auth/login' ? <Link className='btn mr-5 bg-purple-700 text-white' to={'/auth/register'}>Sign UP</Link> : <Link className='btn mr-5 bg-purple-700 text-white' to={'/auth/login'}>Sign In</Link>}
                     
-                    
                       </div>
                     </div>
+                   
                                         );
                     };
 

@@ -24,7 +24,7 @@ useEffect(() => {
                                         <div className="card-body">
                                           <div className='flex flex-col md:flex-row justify-between items-center'>
                                           <div className='flex gap-5'>
-                                          <img className='w-14' src={brand?.brand_logo} alt="" />
+                                          <img className='w-14 rounded-full' src={brand?.brand_logo} alt="" />
                                           <h2 className="card-title">{brand?.brand_name}</h2>
                                           </div>
                                           <div className='flex gap-2 md:gap-5'>

@@ -1,18 +1,16 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Login = () => {
-                    const {user,setUser,SignInEmailAndPassword,SignInGoogle} = useContext(AuthContext)
+                    const {user,setUser,SignInEmailAndPassword,SignInGoogle,resetPassword} = useContext(AuthContext)
                     const navigate = useNavigate()
                     const [showPassword,setShowPassword] = useState(false)
-                   const location = useLocation()
-                   console.log(location);
-                   
-
-                    const handleLogin = e => {
+                   const location = useLocation();
+                   const emailRef = useRef(null)
+ const handleLogin = e => {
                       e.preventDefault()
                       const email = e.target.email.value;
                       const password = e.target.password.value;
@@ -27,7 +25,7 @@ const Login = () => {
                       })
                      
                     }
-        const handleGoogleLogin = () => {
+const handleGoogleLogin = () => {
                     SignInGoogle()
                     .then(res => {
                       setUser(res.user)
@@ -36,9 +34,29 @@ const Login = () => {
                     .catch(err => {
                       toast.error(err.message)
                     })
+ }
+ const handleForget = (e) => {
+  e.preventDefault();
+  const email = emailRef.current.value;
+  // const mailtoLink = `mailto:${email}?subject=Reset%20Your%20Password&body=Please%20click%20the%20link%20below%20to%20reset%20your%20password%3A%0D%0A%0D%0Ahttps%3A%2F%2Fyourapp.com%2Freset-password%3Femail%3D${email}`;
+ 
+  
+resetPassword(email)
+.then(res => {
+  window.location.href = 'https://mail.google.com/mail/u/0/#inbox'; 
+  toast.success('Password reset email link created!')
+  
+}
+)
+.catch(err => console.log(err)
+)
+  
+  
+  // Perform login action using email and password
+};
 
-                    
-        }
+
+
                                         return (
                     <div className='mt-10 md:mt-20 lg:mt-32 flex justify-center items-center'>
                     <div className="card bg-base-100 p-5 w-full max-w-lg shrink-0 rounded-none border">
@@ -48,7 +66,7 @@ const Login = () => {
                     <label className="label">
                     <span className="label-text">Email</span>
                     </label>
-                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                    <input ref={emailRef}  type="email" name="email" placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                                         <label className="input input-bordered flex items-center gap-2">
@@ -65,16 +83,13 @@ const Login = () => {
                                             <input type={!showPassword?'password':'text'} name='password' className="grow"  />
                                            <p className='flex justify-end' onClick={() => setShowPassword(!showPassword)}> {showPassword ? <FaEyeSlash></FaEyeSlash>: <FaEye></FaEye>}</p>
                                           </label>
-                                       
-                    {/* {error.login && <label className="label">
-                    {error.login}
-                    </label>} */}
+            
                     <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                    <p onClick={handleForget} className="underline mt-5 text-xl font-medium">Forgot password?</p>
                     </label>
                     </div>
-                    <div  className="form-control  mt-6">
-                    <button className="btn btn-neutral">Login</button>
+                    <div  className="form-control  mt-2">
+                    <button className="btn btn-primary">Login</button>
                     </div>
                     </form>
                     <p className="text-center mb-4">Dont’t Have An Account ? <Link className='text-red-800 text-xl font-medium ' to={'/auth/register'}>Register</Link></p>
