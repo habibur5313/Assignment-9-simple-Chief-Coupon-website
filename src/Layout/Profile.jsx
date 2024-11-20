@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const Profile = () => {
                     const {user} = useContext(AuthContext)
-                    console.log(user);
                     
                     return (
                                       

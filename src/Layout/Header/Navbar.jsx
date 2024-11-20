@@ -11,7 +11,7 @@ const {pathname} = useLocation()
                     const links = <>
                     <NavLink to={'/'}>Home</NavLink>
                     <NavLink to={'/brands'}>Brands</NavLink>
-                    <NavLink to={'/profile'}>My Profile</NavLink>
+                    {user && <NavLink to={'/profile'}>My Profile</NavLink>}
                     <NavLink to={'/about/dev'}>About dev</NavLink>
                    
                     </>
