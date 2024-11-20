@@ -17,6 +17,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import ResetPassword from './Pages/ResetPassword';
 
 
 const router = createBrowserRouter([
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
     ]
   },
 
+  {
+    path: '/resetPassword',
+    element: <ResetPassword></ResetPassword>
+  },
   {
     path: '*',
     element: 'ERROR'

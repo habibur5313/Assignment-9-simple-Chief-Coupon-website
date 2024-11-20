@@ -6,6 +6,7 @@ export const AuthContext = createContext(null)
 const AuthProvider = ({children}) => {
 const [user,setUser] = useState(null)
 const [loading,setLoading] = useState(false)
+const [loginEmail,setLoginEmail] = useState('')
 const googleProvider = new GoogleAuthProvider();
 
 const SignInEmailAndPassword = (email,password) => {
@@ -57,6 +58,8 @@ const AuthInfo = {
                     SignInGoogle,
                     Update_information,
                     loading,
+                    loginEmail,
+                    setLoginEmail,
                     resetPassword
 }
                     return (

@@ -1,15 +1,16 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext,  useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Login = () => {
-                    const {user,setUser,SignInEmailAndPassword,SignInGoogle,resetPassword} = useContext(AuthContext)
+                    const {user,setUser,SignInEmailAndPassword,SignInGoogle,setLoginEmail} = useContext(AuthContext)
                     const navigate = useNavigate()
                     const [showPassword,setShowPassword] = useState(false)
                    const location = useLocation();
-                   const emailRef = useRef(null)
+                
+                 
  const handleLogin = e => {
                       e.preventDefault()
                       const email = e.target.email.value;
@@ -35,29 +36,21 @@ const handleGoogleLogin = () => {
                       toast.error(err.message)
                     })
  }
- const handleForget = (e) => {
-  e.preventDefault();
-  const email = emailRef.current.value;
-  // const mailtoLink = `mailto:${email}?subject=Reset%20Your%20Password&body=Please%20click%20the%20link%20below%20to%20reset%20your%20password%3A%0D%0A%0D%0Ahttps%3A%2F%2Fyourapp.com%2Freset-password%3Femail%3D${email}`;
+
+ const handleChange = (e) => {
+  e.preventDefault()
+  setLoginEmail(e.target.value);
+  
+ }
+
+ const handleForget = () => {
  
-  
-resetPassword(email)
-.then(res => {
-  window.location.href = 'https://mail.google.com/mail/u/0/#inbox'; 
-  toast.success('Password reset email link created!')
-  
-}
-)
-.catch(err => console.log(err)
-)
-  
-  
-  // Perform login action using email and password
+  navigate('/resetPassword')
+
 };
 
 
-
-                                        return (
+return (
                     <div className='mt-10 md:mt-20 lg:mt-32 flex justify-center items-center'>
                     <div className="card bg-base-100 p-5 w-full max-w-lg shrink-0 rounded-none border">
                                         <h1 className='text-2xl font-semibold text-center'>Login now!</h1>
@@ -66,7 +59,7 @@ resetPassword(email)
                     <label className="label">
                     <span className="label-text">Email</span>
                     </label>
-                    <input ref={emailRef}  type="email" name="email" placeholder="email" className="input input-bordered" required />
+                    <input onChange={handleChange}  type="email" name="email" placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                                         <label className="input input-bordered flex items-center gap-2">
@@ -85,7 +78,7 @@ resetPassword(email)
                                           </label>
             
                     <label className="label">
-                    <p onClick={handleForget} className="underline mt-5 text-xl font-medium">Forgot password?</p>
+                    <Link onClick={handleForget}  className="underline mt-5 text-xl font-medium">Forgot password?</Link>
                     </label>
                     </div>
                     <div  className="form-control  mt-2">

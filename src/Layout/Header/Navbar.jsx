@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
+import { FaHome } from 'react-icons/fa';
+import { SiBrandfolder } from 'react-icons/si';
+import { ImProfile } from 'react-icons/im';
 
 const Navbar = () => {
 
@@ -9,10 +12,10 @@ const {pathname} = useLocation()
 
 
                     const links = <>
-                    <NavLink to={'/'}>Home</NavLink>
-                    <NavLink to={'/brands'}>Brands</NavLink>
-                    {user && <NavLink to={'/profile'}>My Profile</NavLink>}
-                    <NavLink to={'/about/dev'}>About dev</NavLink>
+                    <NavLink className={'flex items-center gap-1'} to={'/'}><FaHome />Home</NavLink>
+                    <NavLink className={'flex items-center gap-1'} to={'/brands'}><SiBrandfolder />Brands</NavLink>
+                    {user && <NavLink className={'flex items-center gap-1'} to={'/profile'}><ImProfile />My Profile</NavLink>}
+                    <NavLink className={'flex items-center gap-1'} to={'/about/dev'}>About dev</NavLink>
                    
                     </>
                     
