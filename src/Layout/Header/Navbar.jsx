@@ -4,6 +4,7 @@ import { AuthContext } from '../../Context/AuthProvider';
 import { FaHome } from 'react-icons/fa';
 import { SiBrandfolder } from 'react-icons/si';
 import { ImProfile } from 'react-icons/im';
+import logo from '../../../src/assets/logo.png'
 
 const Navbar = () => {
 
@@ -44,7 +45,8 @@ const {pathname} = useLocation()
                             {links}
                           </ul>
                         </div>
-                        <h3 className="btn btn-ghost  pl-0 md:text-3xl sm:text-xl font-semibold  ">Coupon Chief</h3>
+                        {/* <h3 className="btn btn-ghost  pl-0 md:text-3xl sm:text-xl font-semibold  ">Coupon Chief</h3> */}
+                        <img className='w-2/3 xl:-mt-3 2xl:-mt-5 ' src={logo} alt="" />
                       </div>
                       <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 gap-2 xl:gap-4 text-xl font-medium ">

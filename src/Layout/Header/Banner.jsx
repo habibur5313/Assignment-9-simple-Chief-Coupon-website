@@ -31,16 +31,16 @@ const {user} = useContext(AuthContext)
         className="mySwiper2  mt-10"
       >
         <SwiperSlide>
-          <img className='w-full max-h-[700px] rounded-xl' src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img className='w-full h-[300px] md:h-[450px] lg:h-[600px] rounded-xl' src="https://i.ibb.co.com/WPgs25d/Screenshot-2024-11-21-160741.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='w-full max-h-[700px] rounded-xl' src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img className='w-full h-[300px] md:h-[450px] lg:h-[600px] rounded-xl' src="https://i.ibb.co.com/nC43Bdy/images-5.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='w-full max-h-[700px] rounded-xl' src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img className='w-full h-[300px] md:h-[450px] lg:h-[600px] rounded-xl' src="https://i.ibb.co.com/3RJ7dt4/images-6.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='w-full max-h-[700px] rounded-xl' src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img className='w-full h-[300px] md:h-[450px] lg:h-[600px] rounded-xl' src="https://i.ibb.co.com/y0trmtD/images-4.png" />
         </SwiperSlide>
         
       </Swiper>
@@ -55,16 +55,16 @@ const {user} = useContext(AuthContext)
       >
 
         <SwiperSlide>
-          <img className='rounded-xl' src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img className='rounded-xl h-[120px]' src="https://i.ibb.co.com/WPgs25d/Screenshot-2024-11-21-160741.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='rounded-xl' src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <img className='rounded-xl h-[120px]' src="https://i.ibb.co.com/nC43Bdy/images-5.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='rounded-xl' src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <img className='rounded-xl h-[120px]' src="https://i.ibb.co.com/3RJ7dt4/images-6.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='rounded-xl' src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <img className='rounded-xl h-[120px]' src="https://i.ibb.co.com/y0trmtD/images-4.png" />
         </SwiperSlide>
       
       </Swiper>
