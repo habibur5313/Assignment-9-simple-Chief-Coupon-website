@@ -13,12 +13,13 @@ import Brands from './Pages/Brands';
 import CardDetails from './Pages/CardDetails';
 import Profile from './Layout/Profile';
 import PrivateRoute from './Private/PrivateRoute';
+import ResetPassword from './Pages/ResetPassword';
+import Error from './Pages/Error';
+import AddToCart from './Pages/AddToCart';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import ResetPassword from './Pages/ResetPassword';
-import Error from './Pages/Error';
 
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         path: '/brands',
         element: <Brands></Brands>,
         loader: () => fetch('/coupons.json')
+      },
+      {
+        path: '/addToCart',
+        element: <AddToCart></AddToCart>,
       },
       {
         path: '/getCode/:id',

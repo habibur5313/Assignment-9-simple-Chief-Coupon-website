@@ -5,6 +5,7 @@ import { FaHome } from 'react-icons/fa';
 import { SiBrandfolder } from 'react-icons/si';
 import { ImProfile } from 'react-icons/im';
 import logo from '../../../src/assets/logo.png'
+import { GrHistory } from 'react-icons/gr';
 
 const Navbar = () => {
 
@@ -16,6 +17,7 @@ const {pathname} = useLocation()
                     <NavLink className={'flex items-center gap-1'} to={'/'}><FaHome />Home</NavLink>
                     <NavLink className={'flex items-center gap-1'} to={'/brands'}><SiBrandfolder />Brands</NavLink>
                     {user && <NavLink className={'flex items-center gap-1'} to={'/profile'}><ImProfile />My Profile</NavLink>}
+                    {user && <NavLink className={'flex items-center gap-1'} to={'/addToCart'}><GrHistory />Cart</NavLink>}
                     <NavLink className={'flex items-center gap-1'} to={'/about/dev'}>About dev</NavLink>
                    
                     </>

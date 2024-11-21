@@ -4,13 +4,13 @@ import 'animate.css';
 
 const CouponsCard = ({coupon}) => {
 
-const {_id,brand_name,isSaleOn,brand_logo,coupons,category} = coupon
+const {_id,brand_name,brand_logo,coupons,category} = coupon
 
 
                     return (
                                         <div className="card card-compact bg-base-100 shadow-xl">
                                         <figure>
-                                        <img className='w-full h-[300px]'
+                                        <img className='w-full h-[200px]'
                                         src={brand_logo}
                                         alt="Shoes" />
                                         </figure>
@@ -23,9 +23,9 @@ const {_id,brand_name,isSaleOn,brand_logo,coupons,category} = coupon
                                         <p className='text-2xl font-medium'>Category: {category}</p>
                                         <div className='flex justify-between items-center'>
                                         <div>
-                                        {isSaleOn ? <Link to={`/getCode/${_id}`}><button className="btn btn-primary">View Coupons</button></Link>: <button className="btn btn-primary">View Coupons</button>}
+                                       <Link to={`/getCode/${_id}`}><button className="btn btn-primary">View Coupons</button></Link>
                                         </div>
-                                          <p className='text-xl font-medium flex  justify-end text-green-400 animate__animated animate__bounce animate__infinite	infinite'>{isSaleOn && 'Sale is ON'}</p>
+                                    
                                           </div>
                                       
                                         </div>

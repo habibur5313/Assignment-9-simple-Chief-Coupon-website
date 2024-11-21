@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import DetailsCoupon from './DetailsCoupon';
+import { AuthContext } from '../Context/AuthProvider';
 
 const CardDetails = () => {
-
+const {useCode,setUseCode} = useContext(AuthContext)
 const [brand,setBrand] = useState(null)
 const {id} = useParams()
 const data = useLoaderData()
+
+
 
 useEffect(() => {
                     const finded = data.find(dta => dta._id === id)
                        setBrand(finded)
 },[])
 
-// const {brand_name,isSaleOn,brand_logo,rating,description} = brand
                     return (
                                         
                                         <div className="card max-w-xl mx-auto mt-10  card-compact bg-base-100 shadow-xl">
@@ -43,9 +45,12 @@ useEffect(() => {
                                           </div>
                                           </div>
                                        <div className='grid grid-cols-1 md:grid-cols-2'>
-                                          {brand?.coupons.map(coupon => <DetailsCoupon coupon={coupon}></DetailsCoupon>)}
+                                          {brand?.coupons.map((coupon,idx) => <DetailsCoupon coupon={coupon} key={idx}></DetailsCoupon>)}
                                        </div>
-                                       <Link to={brand?.shop_link} className='btn btn-primary mx-5 text-center'>Use Code</Link>
+                                       <div className='flex justify-between'>
+                                          <button onClick={() => setUseCode([...useCode,brand])} className='btn btn-primary'>Add to Cart</button>
+                                       <Link  to={brand?.shop_link}  className='btn btn-primary mx-5 text-center'>Use Code</Link>
+                                       </div>
                                         </div>
                                         </div>
                                     
