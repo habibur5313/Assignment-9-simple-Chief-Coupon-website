@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import toast from 'react-hot-toast';
 
 
 
 const DetailsCoupon = ({coupon}) => {
-
+    useEffect(() =>{
+        document.title="Detail Cart | Coupon Chief"
+       },[])
 const {coupon_type,condition,expiry_date,description,coupon_code} = coupon
 
                     return (

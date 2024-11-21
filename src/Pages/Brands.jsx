@@ -3,6 +3,9 @@ import { useLoaderData } from 'react-router-dom';
 import BrandsCard from './BrandsCard';
 
 const Brands = () => {
+  useEffect(() =>{
+    document.title="Brands | Coupon Chief"
+   },[])
                     const loader = useLoaderData()
                     const [find,setFind] = useState(null)
 

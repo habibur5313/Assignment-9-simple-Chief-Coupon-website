@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Header/Navbar';
 import { Outlet, useLocation } from 'react-router-dom';
 import Footer from './Header/Footer';
@@ -7,6 +7,9 @@ import BrandsOnSell from '../Pages/BrandsOnSell';
 
 
 const HomeLayout = () => {
+  useEffect(() =>{
+    document.title="Home | Coupon Chief"
+   },[])
   const {pathname} = useLocation()
                     return (
                                        <div className='bg-sky-100'>

@@ -1,8 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import { Link } from 'react-router-dom';
 
 const Profile = () => {
+  useEffect(() =>{
+    document.title="Profile | Coupon Chief"
+   },[])
                     const {user} = useContext(AuthContext)
                     
                     return (

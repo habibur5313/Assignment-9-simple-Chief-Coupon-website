@@ -1,10 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 const UpdateInformation = () => {
-
+                    useEffect(() =>{
+                                        document.title="Update Profile | Coupon Chief"
+                                       },[])
                     const {Update_information} = useContext(AuthContext)
                     const navigate = useNavigate()
 

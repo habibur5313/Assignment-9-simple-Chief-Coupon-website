@@ -3,6 +3,9 @@ import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
 const ResetPassword = () => {
+                    useEffect(() =>{
+                                        document.title="Reset Password | Coupon Chief"
+                                       },[])
 const {loginEmail,resetPassword,handleSignOut} = useContext(AuthContext)
 
 const handleResetPassword = () => {

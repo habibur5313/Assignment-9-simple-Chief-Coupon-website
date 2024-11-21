@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import DetailsCoupon from './DetailsCoupon';
 import { AuthContext } from '../Context/AuthProvider';
+import toast from 'react-hot-toast';
 
 const CardDetails = () => {
 const {useCode,setUseCode} = useContext(AuthContext)
@@ -15,6 +16,11 @@ useEffect(() => {
                     const finded = data.find(dta => dta._id === id)
                        setBrand(finded)
 },[])
+
+const handleAddCart = (brand) => {
+   setUseCode([...useCode,brand])
+   toast.success('add to cart successfully')
+}
 
                     return (
                                         
@@ -48,7 +54,7 @@ useEffect(() => {
                                           {brand?.coupons.map((coupon,idx) => <DetailsCoupon coupon={coupon} key={idx}></DetailsCoupon>)}
                                        </div>
                                        <div className='flex justify-between'>
-                                          <button onClick={() => setUseCode([...useCode,brand])} className='btn btn-primary'>Add to Cart</button>
+                                          <button onClick={() => handleAddCart(brand)} className='btn btn-primary'>Add to Cart</button>
                                        <Link  to={brand?.shop_link}  className='btn btn-primary mx-5 text-center'>Use Code</Link>
                                        </div>
                                         </div>

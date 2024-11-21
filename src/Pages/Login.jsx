@@ -1,10 +1,13 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import React, { useContext,  useState } from 'react';
+import React, { useContext,  useEffect,  useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Context/AuthProvider';
 import toast from 'react-hot-toast';
 
 const Login = () => {
+  useEffect(() =>{
+    document.title="Login | Coupon Chief"
+   },[])
                     const {user,setUser,SignInEmailAndPassword,SignInGoogle,setLoginEmail} = useContext(AuthContext)
                     const navigate = useNavigate()
                     const [showPassword,setShowPassword] = useState(false)

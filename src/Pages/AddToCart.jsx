@@ -1,8 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../Context/AuthProvider';
 import CartCard from './CartCard';
 
 const AddToCart = () => {
+  useEffect(() =>{
+    document.title="Cart | Coupon Chief"
+   },[])
                     const {useCode} = useContext(AuthContext)
                     
                     

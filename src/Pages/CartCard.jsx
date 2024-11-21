@@ -39,7 +39,7 @@ const CartCard= ({brand}) => {
                    
                     <div className='flex justify-between items-center'>
                    <div>
-                   {isSaleOn ? <Link to={`/getCode/${_id}`}><button className="btn btn-primary">View Coupons</button></Link>: <button className="btn btn-primary">View Coupons</button>}
+                   <Link to={`/getCode/${_id}`}><button className="btn btn-primary">View Coupons</button></Link>
                    </div>
                     <p className='text-xl font-medium flex  justify-end text-green-400 animate__animated animate__bounce animate__infinite	infinite'>{isSaleOn && 'Sale is ON'}</p>
                     </div>

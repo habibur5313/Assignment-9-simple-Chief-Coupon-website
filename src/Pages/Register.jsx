@@ -1,5 +1,5 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Context/AuthProvider";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,9 @@ import toast from "react-hot-toast";
 
 
 const Register = () => {
-
+  useEffect(() =>{
+    document.title="Register | Coupon Chief"
+   },[])
 const {setUser,SignUpEmailAndPassword,SignInGoogle,Update_information} = useContext(AuthContext)
 const navigate = useNavigate()
 const [showPassword,setShowPassword] = useState(false)
