@@ -19,7 +19,7 @@ const Profile = () => {
                                         <h2 className="card-title">{user?.displayName}</h2>
                                         <p>{user?.email}</p>
                                         <div className='flex justify-between items-center'>
-                                        <Link to={'/auth/updateInformation'} className='btn btn-primary'>Update Profile</Link>
+                                        <Link to={'/auth/updateInformation'} className='btn mr-5 btn-primary'>Update Profile</Link>
                                         <Link to={'/resetPassword'} className='btn btn-primary'>Reset Password</Link>
                                         </div>
                                         

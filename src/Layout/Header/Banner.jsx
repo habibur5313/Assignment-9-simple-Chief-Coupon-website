@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-
+import 'animate.css';
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
@@ -18,7 +18,7 @@ export default function Banner() {
 const {user} = useContext(AuthContext)
   return (
     <>
-{user && <h1 className='text-3xl mt-5 font-semibold text-purple-700 text-center'>Hello {user.displayName},Welcome To dashboard</h1>}
+{user && <h1 className='text-3xl mt-5 font-semibold animate__animated animate__pulse animate__infinite	infinite text-purple-700 text-center'>Hello {user.displayName},Welcome To dashboard</h1>}
       <Swiper
         style={{
           '--swiper-navigation-color': '#fff',

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import CouponsCard from './CouponsCard';
 import Marquee from 'react-fast-marquee';
-import toast from 'react-hot-toast';
 
 const Coupons = () => {
+  useEffect(() =>{
+    document.title="Home | Coupon Chief"
+   },[])
 const data = useLoaderData()
 
 

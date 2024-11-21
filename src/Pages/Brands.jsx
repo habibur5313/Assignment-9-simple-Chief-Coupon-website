@@ -28,7 +28,7 @@ const handleSearch = e => {
                       <input type="submit" className='btn w-2/12 btn-primary'  name="" id="" />
                     </div>
                                            </form>
-                                        <div className='max-w-xl mx-4 md:mx-auto flex flex-col gap-6 mt-10'>
+                                        <div  className='max-w-xl mx-4 md:mx-auto flex flex-col gap-6 mt-10'>
                                       {find ? <BrandsCard coupon={find}></BrandsCard> : loader.map((coupon,idx) => <BrandsCard coupon={coupon} key={idx}></BrandsCard>)}                      
                                         </div>
                                         </div>

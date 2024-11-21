@@ -10,7 +10,9 @@ const {pathname} = useLocation()
 
 
 if(!loading){
-                    return <p>loading....</p>
+                    return <div className='flex justify-center mt-20'>
+                                        <span className="loading loading-bars loading-lg "></span>
+                    </div>
 }
 if(user){
  return children

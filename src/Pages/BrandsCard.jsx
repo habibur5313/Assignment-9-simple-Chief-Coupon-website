@@ -8,7 +8,7 @@ const {_id,brand_name,isSaleOn,brand_logo,rating,description} = coupon
 
 
                     return (
-                    <div className="card card-compact bg-base-100 shadow-xl">
+                    <div   className="card card-compact bg-base-100 shadow-xl" >
                     <figure>
                     <img className='w-full h-[300px]'
                     src={brand_logo}
@@ -17,7 +17,7 @@ const {_id,brand_name,isSaleOn,brand_logo,rating,description} = coupon
                     <div className="card-body">
                     <div className='flex gap-5'>
                     <img className='w-14  rounded-full' src={brand_logo} alt="" />
-                    <h2 className="card-title">{brand_name}</h2>
+                    <h2  className="card-title">{brand_name}</h2>
                     </div>
                     <div className='flex gap-5'>
                     <div className="rating">
