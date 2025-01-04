@@ -5,7 +5,7 @@
 - If there is a discount on the product of any e-commerce site, you will get the code on this website. You can use that code to get the discount.
 
 # Live URL
-- https://small-guitar.surge.sh/
+- https://habiburmamun-assignment-9.surge.sh/
 
 # Key features
 # React
@@ -45,3 +45,6 @@
 - firebase
 - daisy ui
 - AOS
+
+# Mark
+60 out of 60
