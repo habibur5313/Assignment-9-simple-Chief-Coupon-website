@@ -1,3 +1,7 @@
+<div align="center">
+  <img height="1000" src="https://i.ibb.co.com/PZH9hNN/Screenshot-2025-01-08-162818.png"  />
+</div>
+
 # Project Name
 - Coupon Cheif.
 
@@ -37,6 +41,14 @@
 - Analytics: Firebase provides detailed analytics to measure user engagement and activity across your app. You can track custom events, user properties, and much more.
 
 - Cloud Messaging: Firebase Cloud Messaging (FCM) allows you to send notifications and messages to users across different platforms. It supports both notification messages and data messages.
+
+# Technology Used
+- React
+- javascript
+- tailwind css
+- firebase
+- node.js
+ 
 # Npm package used
 - animate css
 - marque
@@ -45,6 +57,30 @@
 - firebase
 - daisy ui
 - AOS
+
+# Dependencies
+
+To run this project, you will need to have the following dependencies installed:
+
+## Frontend
+
+- **React** (version 17.x or higher)
+- **Next.js** (version 10.x or higher)
+- **JavaScript (ES6+)**
+- **Axios** (version 0.21.x or higher)
+- **Tailwind CSS** (version 2.x or higher)
+
+## Testing
+
+- **React Testing Library** (version 11.x or higher)
+
+# Installation
+
+1. Clone the repository: `git clone https://github.com/habibur5313/Chief-Coupon-website.git`
+2. Navigate to the project directory: `cd Chief-Coupon-website`
+3. Install frontend dependencies: `npm install`
+4. Start the development server: `npm run dev`
+
 
 # Mark
 60 out of 60
